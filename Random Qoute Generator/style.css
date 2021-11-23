@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+:root {
+    --background-color: #f2b138;
+    --qoute-background-color: #003f63;
+    --text-color: #fff;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+}
+*::selection {
+    background-color: var(--background-color);
+    color: var(--qoute-background-color);
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    background-color: var(--qoute-background-color);
+    text-align: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 10px solid var(--text-color);
+    border-color: var(--background-color) transparent;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qoute {
+    display: flex;
+    width: 35rem;
+    height: 25rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--qoute-background-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #eee;
+    box-shadow: 0px 0px 5px #000;
+    font-size: 1.2rem;
+}
+q {
+    margin: 1rem 1rem 1.5rem 1rem;
+    text-align: center;
+}
+button {
+    background-color: var(--qoute-background-color);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 0.5rem;
+    outline: none;
+    border: 10px solid var(--text-color);
+    border-color: var(--background-color) transparent;
+}
+button:hover {
+    background-color: var(--background-color);
+    color: var(--qoute-background-color);
+    /* border-color: var(--text-color); */
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .qoute {
+        width: auto;
+        height: auto;
+    }
+}
