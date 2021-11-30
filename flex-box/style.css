@@ -38,6 +38,7 @@ footer {
 header {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 ul {
     list-style: none;
