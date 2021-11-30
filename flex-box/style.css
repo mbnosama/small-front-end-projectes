@@ -1,0 +1,69 @@
+:root {
+    --backColor: #226f54;
+    --divBackColor: #f4f0bb;
+    --txtColor: #000;
+    --headBackColor: #a22c29;
+}
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+body {
+    background-color: var(--backColor);
+    color: var(--txtColor);
+    font-family: sans-serif;
+}
+.content {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+header,
+footer {
+    background-color: var(--headBackColor);
+    color: var(--divBackColor);
+    padding: 0.2rem;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a {
+    color: var(--divBackColor);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover {
+    color: rgb(244, 240, 187, 0.5);
+    transform: scale(1.5);
+}
+main {
+    display: flex;
+    font-size: 1.2rem;
+    flex: 3;
+}
+main > * {
+    margin: 0.1rem;
+    padding: 0.2rem;
+    flex: 1;
+    background-color: var(--divBackColor);
+}
+article {
+    flex: 6;
+}

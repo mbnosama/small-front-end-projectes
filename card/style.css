@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --backColor: #105652;
+    --backCardColor: #e1d89f;
+    --titleColor: ;
+    --txtColor: #000;
+}
+body {
+    background-color: var(--backColor);
+    font-family: sans-serif;
+}
+.content-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    background-color: var(--backCardColor);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    color: var(--txtColor);
+    padding: 0.6rem;
+}
+.card-img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.card:hover {
+    animation: shadow 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+h3,
+p {
+    margin: 5px 0;
+}
+h3 {
+    text-decoration: underline;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.icon {
+    font-size: 2rem;
+    float: right;
+    animation: move-icon 5s linear 10ms infinite normal both;
+}
+/*----------------------------------------------------*/
+
+@keyframes shadow {
+    100% {
+        box-shadow: -1px -1px #678983, -2px -2px #678983, -3px -3px #678983,
+            -4px -4px #678983, -5px -5px #678983, -6px -6px #678983,
+            -7px -7px #678983, -8px -8px #678983;
+        transform: translateX(8px) translateY(8px);
+    }
+}
+/*-----------------------------*/
+@keyframes move-icon {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(10px);
+    }
+
+    80% {
+        transform: translateX(8px);
+    }
+
+    90% {
+        transform: translateX(-8px);
+    }
+}
